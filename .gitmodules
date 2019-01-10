@@ -1,0 +1,45 @@
+[submodule "plugged/ack.vim"]
+	path = plugged/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "plugged/bufexplorer.zip"]
+	path = plugged/bufexplorer.zip
+	url = https://github.com/vim-scripts/bufexplorer.zip
+[submodule "plugged/coc.nvim"]
+	path = plugged/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+[submodule "plugged/denite.nvim"]
+	path = plugged/denite.nvim
+	url = https://github.com/Shougo/denite.nvim
+[submodule "plugged/emmet-vim"]
+	path = plugged/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "plugged/far.vim"]
+	path = plugged/far.vim
+	url = https://github.com/brooth/far.vim
+[submodule "plugged/jsonc.vim"]
+	path = plugged/jsonc.vim
+	url = https://github.com/neoclide/jsonc.vim
+[submodule "plugged/neoformat"]
+	path = plugged/neoformat
+	url = https://github.com/sbdchd/neoformat
+[submodule "plugged/nerdcommenter"]
+	path = plugged/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule "plugged/nerdtree"]
+	path = plugged/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "plugged/vim-airline"]
+	path = plugged/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "plugged/vim-fugitive"]
+	path = plugged/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "plugged/vim-polyglot"]
+	path = plugged/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "plugged/vim-powerline"]
+	path = plugged/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline
+[submodule "plugged/vim-surround"]
+	path = plugged/vim-surround
+	url = https://github.com/tpope/vim-surround
