@@ -25,8 +25,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 " Ack-grep插件。需要先安裝ack-grep
 Plug 'mileszs/ack.vim'
-" zencoding的升级版
-Plug 'mattn/emmet-vim'
+" zencoding的升级版 使用 coc-emmet 代替
+"Plug 'mattn/emmet-vim'
 " 另一个buffer浏览
 Plug 'vim-scripts/bufexplorer.zip'
 " 代码格式化插件
@@ -37,6 +37,8 @@ Plug 'neoclide/jsonc.vim'
 
 " 提供异步操作，需要执行 :UpdateRemotePlugins
 Plug 'Shougo/denite.nvim'
+" 多文件查找替换
+Plug 'brooth/far.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -48,9 +50,21 @@ colorscheme longchang
 let $VIMCONFIG=vimroot
 
 set cursorline
+set autochdir  "自动切换目录 与phpcomplete、vimshell冲突
+set cc=81 " 81列处高亮
 set nu " 显示行号
 set list  " 把制表符显示为^I ,用$标示行尾（使用list分辨尾部的字符是tab还是空格）
 set listchars=tab:>-,trail:·
+autocmd CompleteDone * pclose       " 自动关闭自动补全的Preview window
+
+" keymap
+vmap <C-x>c "+y
+nmap <C-x>c "+p
+map <C-x>q :qa<CR>
+imap <C-u> <ESC><C-u>
+imap <C-d> <ESC><C-d>
+imap <C-b> <ESC>i
+imap <C-f> <ESC>la
 
 
 " NERDTree 设置
