@@ -39,6 +39,9 @@ Plug 'neoclide/jsonc.vim'
 Plug 'Shougo/denite.nvim'
 " 多文件查找替换
 Plug 'brooth/far.vim'
+Plug 'mbbill/VimExplorer'
+" sudo 插件
+Plug 'lambdalisue/suda.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -55,9 +58,51 @@ set cc=81 " 81列处高亮
 set nu " 显示行号
 set list  " 把制表符显示为^I ,用$标示行尾（使用list分辨尾部的字符是tab还是空格）
 set listchars=tab:>-,trail:·
-autocmd CompleteDone * pclose       " 自动关闭自动补全的Preview window
+" 文件编码
+set encoding=utf8
+set fileencodings=utf8,gb2312,gb18030,ucs-bom,latin1
+
+set foldlevel=10 "默认展开所有代码
+set foldmethod=indent
+
+set showtabline=2  " 0, 1 or 2; when to use a tab pages line
+set tabline=%!MyTabLine()  " custom tab pages line
+
+function! MyTabLine()
+  let s = ''
+  let t = tabpagenr()
+  let i = 1
+  while i <= tabpagenr('$')
+    let buflist = tabpagebuflist(i)
+    let winnr = tabpagewinnr(i)
+    let s .= '%' . i . 'T'
+    let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+    let bufnr = buflist[winnr - 1]
+    let file = bufname(bufnr)
+    let buftype = getbufvar(bufnr, 'buftype')
+    if buftype == 'nofile'
+      if file =~ '\/.'
+        let file = substitute(file, '.*\/\ze.', '', '')
+      endif
+    else
+      let file = fnamemodify(file, ':p:t')
+    endif
+    if file == ''
+      let file = '[No Name]'
+    endif
+    let s .= string(i) . ":"
+    let file = strpart(file, 0, 25)
+    let s .= file
+    let i = i + 1
+  endwhile
+  let s .= '%T%#TabLineFill#%='
+  let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
+  return s
+endfunction
 
 " keymap
+nmap <C-n> <ESC>gt
+nmap <C-p> <ESC>gT
 vmap <C-x>c "+y
 nmap <C-x>c "+p
 map <C-x>q :qa<CR>
@@ -65,6 +110,14 @@ imap <C-u> <ESC><C-u>
 imap <C-d> <ESC><C-d>
 imap <C-b> <ESC>i
 imap <C-f> <ESC>la
+" 窗口移动
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+
+set tabstop=2 expandtab shiftwidth=2 softtabstop=2
+au FileType python setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
 
 " NERDTree 设置
@@ -80,9 +133,9 @@ let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 " Use <enter> to confirm complete
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"autocmd CompleteDone * pclose       " 自动关闭自动补全的Preview window
 
 " airline
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
 let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
 let g:airline_section_b = ''  " 不显示VCS相关信息
-let g:airline_section_c = expand("%:p")   " 显示文件全名

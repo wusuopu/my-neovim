@@ -43,3 +43,9 @@
 [submodule "plugged/vim-surround"]
 	path = plugged/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "plugged/VimExplorer"]
+	path = plugged/VimExplorer
+	url = https://github.com/mbbill/VimExplorer
+[submodule "plugged/suda.vim"]
+	path = plugged/suda.vim
+	url = https://github.com/lambdalisue/suda.vim
