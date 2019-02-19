@@ -26,7 +26,7 @@ Plug 'tpope/vim-surround'
 " Ack-grep插件。需要先安裝ack-grep
 Plug 'mileszs/ack.vim'
 " zencoding的升级版 使用 coc-emmet 代替
-"Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " 另一个buffer浏览
 Plug 'vim-scripts/bufexplorer.zip'
 " 代码格式化插件
@@ -118,6 +118,8 @@ nmap <C-l> <C-w>l
 
 set tabstop=2 expandtab shiftwidth=2 softtabstop=2
 au FileType python setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
+au FileType c setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
+au FileType cpp setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
 
 " NERDTree 设置
@@ -139,3 +141,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
 let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
 let g:airline_section_b = ''  " 不显示VCS相关信息
+
+" emmet设置
+let g:user_emmet_leader_key='<c-x>'
