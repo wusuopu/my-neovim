@@ -4,7 +4,6 @@
     "coc-emmet": "^1.0.4",
     "coc-html": "^1.0.7",
     "coc-json": "^1.0.7",
-    "coc-pairs": "^1.0.1",
     "coc-pyls": "^1.0.6",
     "coc-snippets": "^1.0.4",
     "coc-tslint": "^1.0.13",

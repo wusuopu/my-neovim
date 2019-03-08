@@ -42,6 +42,8 @@ Plug 'brooth/far.vim'
 Plug 'mbbill/VimExplorer'
 " sudo 插件
 Plug 'lambdalisue/suda.vim'
+" auto close pairs
+Plug 'cohama/lexima.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

@@ -49,3 +49,6 @@
 [submodule "plugged/suda.vim"]
 	path = plugged/suda.vim
 	url = https://github.com/lambdalisue/suda.vim
+[submodule "plugged/lexima.vim"]
+	path = plugged/lexima.vim
+	url = https://github.com/cohama/lexima.vim
