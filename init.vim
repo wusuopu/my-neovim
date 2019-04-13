@@ -32,7 +32,7 @@ Plug 'vim-scripts/bufexplorer.zip'
 " 代码格式化插件
 Plug 'sbdchd/neoformat'
 " Complete engine and Language Server
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'neoclide/jsonc.vim'
 
 " 提供异步操作，需要执行 :UpdateRemotePlugins
