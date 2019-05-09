@@ -10,7 +10,11 @@ pip3 install neovim
 # rm -rf ~/.config/yarn
 yarn global add neovim
 
+# install python-language-server
 pip install python-language-server
+
+# install ruby-language-server
+gem install solargraph
 
 git submodule update --init --recursive
 

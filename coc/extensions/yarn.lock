@@ -174,6 +174,15 @@ coc-snippets@^1.0.4:
     vscode-uri "^1.0.6"
     which "^1.3.1"
 
+coc-solargraph@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npm.taobao.org/coc-solargraph/download/coc-solargraph-1.0.7.tgz#7b87eb8130bce3626ec2c7e8bdccae02cda7c2e2"
+  integrity sha1-e4frgTC842JuwsfovcyuAs2nwuI=
+  dependencies:
+    tslib "^1.9.3"
+    vscode-languageserver-protocol "^3.13.0"
+    which "^1.3.1"
+
 coc-tslint@^1.0.13:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/coc-tslint/-/coc-tslint-1.0.13.tgz#69c7e5ff02390ca7a59762da6cacf662900e13b3"

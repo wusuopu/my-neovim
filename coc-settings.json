@@ -23,4 +23,6 @@
 		"javascriptreact": ["javascript"],
 		"typescript": ["javascript"],
 	},
+	"solargraph.enable": true,
+	"solargraph.checkGemVersion": false,
 }
