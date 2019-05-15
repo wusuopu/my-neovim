@@ -44,6 +44,8 @@ Plug 'mbbill/VimExplorer'
 Plug 'lambdalisue/suda.vim'
 " auto close pairs
 Plug 'cohama/lexima.vim'
+" vue 语法高亮
+Plug 'posva/vim-vue'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -122,6 +124,7 @@ set tabstop=2 expandtab shiftwidth=2 softtabstop=2
 au FileType python setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 au FileType c setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 au FileType cpp setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
+au FileType vue syntax sync fromstart
 
 
 " NERDTree 设置
