@@ -1,7 +1,15 @@
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 let vimroot = expand("<sfile>:p:h")
-let g:python_host_prog = vimroot.'/provider/python/neovim2/bin/python'
-let g:python3_host_prog = vimroot.'/provider/python/neovim3/bin/python'
+if $NEOVIM_PYTHON_HOST_PROG != ""
+  let g:python_host_prog = $NEOVIM_PYTHON_HOST_PROG
+else
+  let g:python_host_prog = vimroot.'/provider/python/neovim2/bin/python'
+endif
+if $NEOVIM_PYTHON3_HOST_PROG != ""
+  let g:python3_host_prog = $NEOVIM_PYTHON3_HOST_PROG
+else
+  let g:python3_host_prog = vimroot.'/provider/python/neovim3/bin/python'
+endif
 
 
 if vimroot != stdpath('config')
