@@ -54,6 +54,8 @@ Plug 'lambdalisue/suda.vim'
 Plug 'cohama/lexima.vim'
 " vue 语法高亮
 Plug 'posva/vim-vue'
+" typescript react
+Plug 'ianks/vim-tsx'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
