@@ -10,19 +10,16 @@ pip3 install neovim
 # rm -rf ~/.config/yarn
 yarn global add neovim
 
-# install python-language-server
-pip install python-language-server
+# python开发环境
+pip install pylint
 
-# install ruby-language-server
+# ruby开发环境 ruby-language-server
 gem install solargraph
 
+# vue开发环境 vue-language-server
+yarn global add vue-language-server
+
 git submodule update --init --recursive
-
-patch -p0 < patch/coc.diff
-
-pushd plugged/coc.nvim/
-yarn
-popd
 
 pushd coc/extensions/
 yarn

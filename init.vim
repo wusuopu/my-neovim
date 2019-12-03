@@ -11,6 +11,7 @@ else
   let g:python3_host_prog = vimroot.'/provider/python/neovim3/bin/python'
 endif
 
+let g:coc_extension_root = vimroot.'/coc/extensions'
 
 if vimroot != stdpath('config')
   " 只加载与 init.vim 同一目录下的 .vim 目录内容
@@ -40,7 +41,7 @@ Plug 'vim-scripts/bufexplorer.zip'
 " 代码格式化插件
 Plug 'sbdchd/neoformat'
 " Complete engine and Language Server
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/jsonc.vim'
 
 " 提供异步操作，需要执行 :UpdateRemotePlugins
