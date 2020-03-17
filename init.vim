@@ -57,6 +57,8 @@ Plug 'cohama/lexima.vim'
 Plug 'posva/vim-vue'
 " typescript react
 Plug 'ianks/vim-tsx'
+" rails
+Plug 'tpope/vim-rails'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

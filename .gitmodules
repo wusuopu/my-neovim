@@ -58,3 +58,6 @@
 [submodule "plugged/vim-tsx"]
 	path = plugged/vim-tsx
 	url = https://github.com/ianks/vim-tsx.git
+[submodule "plugged/vim-rails"]
+	path = plugged/vim-rails
+	url = https://github.com/tpope/vim-rails
