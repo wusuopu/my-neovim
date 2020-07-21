@@ -11,7 +11,7 @@ else
   let g:python3_host_prog = vimroot.'/provider/python/neovim3/bin/python'
 endif
 
-let g:coc_extension_root = vimroot.'/coc/extensions'
+let g:coc_data_home = vimroot.'/coc'
 
 if vimroot != stdpath('config')
   " 只加载与 init.vim 同一目录下的 .vim 目录内容

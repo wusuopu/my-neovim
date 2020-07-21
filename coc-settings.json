@@ -3,17 +3,37 @@
 	"coc.preferences.noselect": false,
 	"coc.preferences.preferCompleteThanJumpPlaceholder": true,
 	"coc.preferences.minTriggerInputLength": 2,
+	"python.linting.mypyEnabled": true,
+	"python.venvFolders": [
+		".venv",
+		"envs",
+		".pyenv",
+		".direnv"
+	],
 	"tsserver.enable": true,
 	"tsserver.enableJavascript": true,
 	"languageserver": {
 		"flow": {
+			"enable": false,
 			"command": "flow-language-server",
 			"args": ["--stdio"],
 			"filetypes": ["javascript", "javascriptreact"],
 			"rootPatterns": [".flowconfig"]
+		},
+		"pyls": {
+			"enable": true,
+			"command": "pyls",
+			"filetypes": ["python"],
+			"settings": {
+				"plugins": {
+					"pyls_mypy": {
+						"enable": false,
+						"live_mode": false
+					}
+				}
+			},
 		}
 	},
-	"pyls.enable": true,
 	"tslint.enable": true,
 	"tslint.jsEnable": false,
 	"tslint.run": "onSave",
@@ -23,6 +43,6 @@
 		"javascriptreact": ["javascript"],
 		"typescript": ["javascript"],
 	},
-	"solargraph.enable": true,
+	"solargraph.enable": false,
 	"solargraph.checkGemVersion": false,
 }

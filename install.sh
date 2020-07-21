@@ -12,6 +12,7 @@ yarn global add neovim
 
 # python开发环境
 pip install pylint
+pip install pyright
 
 # ruby开发环境 ruby-language-server
 gem install solargraph
