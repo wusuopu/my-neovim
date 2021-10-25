@@ -1,5 +1,7 @@
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 let vimroot = expand("<sfile>:p:h")
+" 不加载 python2
+" let g:loaded_python_provider = 0
 if $NEOVIM_PYTHON_HOST_PROG != ""
   let g:python_host_prog = $NEOVIM_PYTHON_HOST_PROG
 else
@@ -48,7 +50,6 @@ Plug 'neoclide/jsonc.vim'
 Plug 'Shougo/denite.nvim'
 " 多文件查找替换
 Plug 'brooth/far.vim'
-Plug 'mbbill/VimExplorer'
 " sudo 插件
 Plug 'lambdalisue/suda.vim'
 " auto close pairs
