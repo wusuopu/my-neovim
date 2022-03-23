@@ -60,6 +60,8 @@ Plug 'posva/vim-vue'
 Plug 'ianks/vim-tsx'
 " rails
 Plug 'tpope/vim-rails'
+" github copilot
+Plug 'github/copilot.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -139,6 +141,7 @@ au FileType python setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 au FileType c setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 au FileType cpp setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 au FileType vue syntax sync fromstart
+autocmd BufNewFile,BufRead *.nvue   set syntax=vue
 
 
 " NERDTree 设置

@@ -58,3 +58,6 @@
 [submodule "plugged/vim-rails"]
 	path = plugged/vim-rails
 	url = https://github.com/tpope/vim-rails
+[submodule "plugged/copilot.vim"]
+	path = plugged/copilot.vim
+	url = https://github.com/github/copilot.vim.git
