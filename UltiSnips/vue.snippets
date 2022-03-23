@@ -1,0 +1,89 @@
+priority -50
+
+#! new page component file
+snippet new_page "New Page Component" b
+<template>
+	<div></div>
+</template>
+
+<script>
+export default {
+	name: '${1:name}$0',
+	components: {
+	},
+	async fetch () {
+	},
+	data () {
+		return {
+		}
+	},
+	computed: {
+	},
+	methods: {
+	},
+}
+</script>
+
+<style lang="less" scoped>
+</style>
+endsnippet
+#! new component file
+snippet new_comp "New Component" b
+<template>
+	<div></div>
+</template>
+
+<script>
+export default {
+	name: '${1:name}$0',
+	components: {
+	},
+	props: {
+	},
+	data () {
+		return {
+		}
+	},
+	computed: {
+	},
+	methods: {
+	},
+}
+</script>
+
+<style lang="less" scoped>
+</style>
+endsnippet
+
+#! new uniapp component file
+snippet new_uni "New UniApp Component" b
+<template>
+	<view></view>
+</template>
+
+<script>
+	export default {
+		name: '${1:name}$0',
+		components: {
+		},
+		props: {
+		},
+		data () {
+			return {
+			}
+		},
+		computed: {
+		},
+		methods: {
+		},
+	}
+</script>
+
+<style lang="scss" scoped>
+</style>
+endsnippet
+
+#! import module
+snippet imp "Import Module" b
+import {$0} from '${1:module}'
+endsnippet
