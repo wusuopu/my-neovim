@@ -1,3 +1,10 @@
 provider
 node_modules
 yarn-error.log
+coc/commands
+coc/history.json
+coc/list-extensions-history.json
+coc/list-lists-history.json
+coc/lists
+coc/memos.json
+coc/snippets-mru

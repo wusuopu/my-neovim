@@ -62,6 +62,8 @@ Plug 'ianks/vim-tsx'
 Plug 'tpope/vim-rails'
 " github copilot
 Plug 'github/copilot.vim'
+" 光标瞬移 <Leader><Leader>s <char>
+Plug 'easymotion/vim-easymotion'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

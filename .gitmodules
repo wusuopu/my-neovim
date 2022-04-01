@@ -61,3 +61,6 @@
 [submodule "plugged/copilot.vim"]
 	path = plugged/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+[submodule "plugged/vim-easymotion"]
+	path = plugged/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
