@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 </style>
 endsnippet
 #! new component file
@@ -51,12 +51,12 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 </style>
 endsnippet
 
 #! new uniapp component file
-snippet new_uni "New UniApp Component" b
+snippet new_uni_comp "New UniApp Component" b
 <template>
 	<view></view>
 </template>
@@ -83,7 +83,94 @@ snippet new_uni "New UniApp Component" b
 </style>
 endsnippet
 
+#! new uniapp component file
+snippet new_uni_page "New UniApp Page" b
+<template>
+	<view></view>
+</template>
+
+<script>
+	export default {
+		components: {
+		},
+		onShow () {
+		},
+		onLoad (query) {
+			$0
+		},
+		data () {
+			return {
+			}
+		},
+		computed: {
+		},
+		methods: {
+		},
+	}
+</script>
+
+<style lang="scss" scoped>
+</style>
+endsnippet
+
+#! new ts uniapp component file
+snippet new_uni_comp_ts "New UniApp TS Component" b
+<template>
+	<view></view>
+</template>
+
+<script>
+import Vue from 'vue';
+export default Vue.extend({
+	name: '${1:name}$0',
+	components: {
+	},
+	props: {
+	},
+	data () {
+		return {
+		}
+	},
+	computed: {
+	},
+	methods: {
+	},
+});
+</script>
+
+<style lang="scss" scoped>
+</style>
+endsnippet
+
+#! new ts uniapp component file
+snippet new_uni_page_ts "New UniApp TS Page" b
+<template>
+	<view></view>
+</template>
+
+<script>
+import Vue from 'vue';
+export default Vue.extend({
+	components: {
+	},
+	props: {
+	},
+	data () {
+		return {
+		}
+	},
+	computed: {
+	},
+	methods: {
+	},
+});
+</script>
+
+<style lang="scss" scoped>
+</style>
+endsnippet
+
 #! import module
-snippet imp "Import Module" b
+snippet impo "Import Module" b
 import {$0} from '${1:module}'
 endsnippet

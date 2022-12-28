@@ -18,7 +18,7 @@ pip install pyright
 gem install solargraph
 
 # vue开发环境 vue-language-server
-yarn global add vue-language-server
+yarn global add vls
 
 git submodule update --init --recursive
 

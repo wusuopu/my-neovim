@@ -46,9 +46,6 @@
 [submodule "plugged/suda.vim"]
 	path = plugged/suda.vim
 	url = https://github.com/lambdalisue/suda.vim
-[submodule "plugged/lexima.vim"]
-	path = plugged/lexima.vim
-	url = https://github.com/cohama/lexima.vim
 [submodule "plugged/vim-vue"]
 	path = plugged/vim-vue
 	url = https://github.com/posva/vim-vue
@@ -64,3 +61,6 @@
 [submodule "plugged/vim-easymotion"]
 	path = plugged/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
+[submodule "plugged/editorconfig-vim"]
+	path = plugged/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim

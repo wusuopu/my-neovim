@@ -52,8 +52,6 @@ Plug 'Shougo/denite.nvim'
 Plug 'brooth/far.vim'
 " sudo 插件
 Plug 'lambdalisue/suda.vim'
-" auto close pairs
-Plug 'cohama/lexima.vim'
 " vue 语法高亮
 Plug 'posva/vim-vue'
 " typescript react
@@ -61,10 +59,11 @@ Plug 'ianks/vim-tsx'
 " rails
 Plug 'tpope/vim-rails'
 " github copilot
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 " 光标瞬移 <Leader><Leader>s <char>
 Plug 'easymotion/vim-easymotion'
 
+Plug 'editorconfig/editorconfig-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -158,8 +157,20 @@ noremap ;l :NERDTreeToggle<CR>
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 " Use <enter> to confirm complete
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 "autocmd CompleteDone * pclose       " 自动关闭自动补全的Preview window
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " airline
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
