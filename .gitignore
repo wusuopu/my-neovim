@@ -8,3 +8,4 @@ coc/list-lists-history.json
 coc/lists
 coc/memos.json
 coc/snippets-mru
+coc/extensions/coc-json-data/

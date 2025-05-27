@@ -7,6 +7,7 @@
 pip2 install neovim
 #source $PWD/provider/python/neovim3/bin/activate
 pip3 install neovim
+pip3 install pynvim
 # rm -rf ~/.config/yarn
 yarn global add neovim
 

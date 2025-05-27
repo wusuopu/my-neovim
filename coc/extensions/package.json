@@ -10,10 +10,10 @@
     "coc-snippets": ">=3.1.6",
     "coc-solargraph": ">=1.2.4",
     "coc-stylelint": ">=1.2.0",
-    "coc-tsserver": ">=1.9.15",
-    "coc-vetur": ">=1.2.5",
+    "coc-tsserver": ">=2.1.4",
     "coc-yaml": ">=1.9.0",
-    "coc-pairs": ">=1.4.1"
+    "coc-pairs": ">=1.4.1",
+    "@yaegassy/coc-volar": ">=0.34.12"
   },
   "disabled": [],
   "locked": [],

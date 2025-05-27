@@ -13,6 +13,7 @@
 		".pyenv",
 		".direnv"
 	],
+	"python.jediEnabled": false,
 	"tsserver.enable": true,
 	"tsserver.enableJavascript": true,
 	"languageserver": {

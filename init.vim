@@ -64,6 +64,13 @@ Plug 'tpope/vim-rails'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'editorconfig/editorconfig-vim'
+
+" fuzzy finder
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
+" 需要先安装 pip3 install ranger-fm pynvim
+Plug 'kevinhwang91/rnvimr'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -73,8 +80,9 @@ colorscheme longchang
 " 覆盖coc.vim的配置
 let $VIMCONFIG=vimroot
 
+set mouse=    "禁用鼠标
 set cursorline
-set autochdir  "自动切换目录 与phpcomplete、vimshell冲突
+set autochdir  "自动切换目录
 set cc=81 " 81列处高亮
 set nu " 显示行号
 set list  " 把制表符显示为^I ,用$标示行尾（使用list分辨尾部的字符是tab还是空格）
@@ -121,6 +129,30 @@ function! MyTabLine()
   return s
 endfunction
 
+" 替换选定区域为升序的数字，如： ::s/<pattern>/\=ReplaceInc(1, 2, 'v')/g
+function! ReplaceInc(start=1, step=1, mode='v', length=1)
+  let result = a:start
+  if a:mode == 'v'
+    " 选择模式下，当前行减去选中的第一行
+    let result = (line('.') - line("'<")) * a:step
+  else
+    " 普通模式下，当前行减去第一行
+    let result = (line('.') - 1) * a:step
+  endif
+  let result = result + a:start
+  let format = "%0" . a:length . "d"
+  let result = printf(format, result)
+  return result
+endfunction
+
+" 插入一些行，包含升序的数字
+function! InsertInc(start, end, length=1, step=1, prefix='', suffix='')
+  let format = "%s%0" . a:length . "d%s"
+  for i in range(a:start, a:end, a:step)
+    put =printf(format, a:prefix, i, a:suffix)
+  endfor
+endfunction
+
 " keymap
 nmap <C-n> <ESC>gt
 nmap <C-p> <ESC>gT
@@ -158,7 +190,7 @@ let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 " Use <enter> to confirm complete
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
- inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 "autocmd CompleteDone * pclose       " 自动关闭自动补全的Preview window
 
 " Use `[g` and `]g` to navigate diagnostics
@@ -179,3 +211,22 @@ let g:airline_section_b = ''  " 不显示VCS相关信息
 
 " emmet设置
 let g:user_emmet_leader_key='<c-x>'
+
+" nvim-telescope配置，需要禁用 autochdir
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" rnvimr Ranger 配置
+" Make Ranger to be hidden after picking a file
+let g:rnvimr_enable_picker = 1
+nnoremap <F4> <cmd>RnvimrToggle<cr>
+" Map Rnvimr action
+let g:rnvimr_action = {
+            \ '<C-t>': 'NvimEdit tabedit',
+            \ '<C-x>': 'NvimEdit split',
+            \ '<C-v>': 'NvimEdit vsplit',
+            \ 'gw': 'JumpNvimCwd',
+            \ 'yw': 'EmitRangerCwd'
+            \ }

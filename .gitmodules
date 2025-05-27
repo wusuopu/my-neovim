@@ -64,3 +64,12 @@
 [submodule "plugged/editorconfig-vim"]
 	path = plugged/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "plugged/plenary.nvim"]
+	path = plugged/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "plugged/telescope.nvim"]
+	path = plugged/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule "plugged/rnvimr"]
+	path = plugged/rnvimr
+	url = https://github.com/kevinhwang91/rnvimr
