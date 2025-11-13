@@ -1,7 +1,7 @@
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 let vimroot = expand("<sfile>:p:h")
 " 不加载 python2
-" let g:loaded_python_provider = 0
+let g:loaded_python_provider = 0
 if $NEOVIM_PYTHON_HOST_PROG != ""
   let g:python_host_prog = $NEOVIM_PYTHON_HOST_PROG
 else
@@ -71,18 +71,20 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " 需要先安装 pip3 install ranger-fm pynvim
 Plug 'kevinhwang91/rnvimr'
+
+Plug 'navarasu/onedark.nvim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 
-colorscheme longchang
+colorscheme onedark
 
 " 覆盖coc.vim的配置
 let $VIMCONFIG=vimroot
 
 set mouse=    "禁用鼠标
 set cursorline
-set autochdir  "自动切换目录
+" set autochdir  "自动切换目录
 set cc=81 " 81列处高亮
 set nu " 显示行号
 set list  " 把制表符显示为^I ,用$标示行尾（使用list分辨尾部的字符是tab还是空格）
@@ -95,7 +97,7 @@ set foldlevel=10 "默认展开所有代码
 set foldmethod=indent
 
 set showtabline=2  " 0, 1 or 2; when to use a tab pages line
-set tabline=%!MyTabLine()  " custom tab pages line
+" set tabline=%!MyTabLine()  " custom tab pages line
 
 function! MyTabLine()
   let s = ''

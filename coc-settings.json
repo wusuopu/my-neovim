@@ -48,5 +48,6 @@
 		"typescript": ["javascript"],
 	},
 	"solargraph.enable": false,
-	"solargraph.checkGemVersion": false,
+  "solargraph.checkGemVersion": false,
+  "snippets.ultisnips.pythonPrompt": false,
 }

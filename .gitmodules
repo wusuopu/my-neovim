@@ -73,3 +73,6 @@
 [submodule "plugged/rnvimr"]
 	path = plugged/rnvimr
 	url = https://github.com/kevinhwang91/rnvimr
+[submodule "plugged/onedark.nvim"]
+	path = plugged/onedark.nvim
+	url = https://github.com/navarasu/onedark.nvim
